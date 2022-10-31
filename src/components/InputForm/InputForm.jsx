@@ -8,15 +8,11 @@ export class InputForm extends Component {
 
   handleInputChange = e => {
     const { name, value } = e.currentTarget;
-    console.log(e.currentTarget.value);
-
     this.setState({ [name]: value });
   };
 
   handleSubmit = e => {
     e.preventDefault();
-    console.log(this.state);
-
     this.props.onSubmit(this.state);
     this.reset();
   };
